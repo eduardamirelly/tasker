@@ -4,14 +4,14 @@ This document provides comprehensive documentation for all Tasker CLI commands, 
 
 ## 📋 Table of Contents
 
-- [Architecture Overview](#architecture-overview)
-- [Add Command (`add`)](#add-command-add)
-- [List Command (`list`)](#list-command-list)
-- [Done Command (`done`)](#done-command-done)
-- [Root Command Setup](#root-command-setup)
-- [Database Integration](#database-integration)
-- [Error Handling](#error-handling)
-- [Best Practices](#best-practices)
+- [Architecture Overview](#-architecture-overview)
+- [Add Command (`add`)](#-add-command-add)
+- [List Command (`list`)](#-list-command-list)
+- [Done Command (`done`)](#-done-command-done)
+- [Root Command Setup](#-root-command-setup)
+- [Database Integration](#-database-integration)
+- [Error Handling](#-error-handling)
+- [Best Practices](#-best-practices)
 
 ## 🏗️ Architecture Overview
 

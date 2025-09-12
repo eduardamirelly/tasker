@@ -4,12 +4,12 @@ A comprehensive guide to the Tasker command-line task management application.
 
 ## 📋 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Getting Started](#getting-started)
-- [Documentation Index](#documentation-index)
-- [Project Structure](#project-structure)
-- [Testing](#testing)
-- [Development](#development)
+- [Project Overview](#-project-overview)
+- [Getting Started](#-getting-started)
+- [Documentation Index](#-documentation-index)
+- [Project Structure](#-project-structure)
+- [Testing](#-testing)
+- [Development](#-development)
 
 ## 🎯 Project Overview
 
