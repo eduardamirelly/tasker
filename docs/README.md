@@ -13,20 +13,22 @@ A comprehensive guide to the Tasker command-line task management application.
 
 ## 🎯 Project Overview
 
-Tasker is a simple, efficient command-line task management tool built with Go. It allows you to manage your daily tasks directly from the terminal with three core commands:
+Tasker is a simple, efficient command-line task management tool built with Go. It allows you to manage your daily tasks directly from the terminal with four core commands:
 
 - **`add`** - Create new tasks with optional descriptions
 - **`list`** - View all your tasks with completion status
 - **`done`** - Mark tasks as completed
+- **`export`** - Export all tasks to CSV format
 
 ### Key Features
 
 - ✅ **Simple CLI Interface** - Easy-to-use commands
 - 🗃️ **SQLite Database** - Local storage, no external dependencies
 - 🚀 **Fast Performance** - Instant task operations
-- 🧪 **Comprehensive Testing** - 40+ test cases ensuring reliability
+- 🧪 **Comprehensive Testing** - 50+ test cases ensuring reliability
 - 📝 **Rich Task Details** - Titles, descriptions, timestamps
 - 🎯 **Status Tracking** - Visual indicators for task completion
+- 📤 **CSV Export** - Export tasks for backup and analysis
 
 ### Technology Stack
 
@@ -78,6 +80,9 @@ Tasker is a simple, efficient command-line task management tool built with Go. I
 # Mark task as done (use the ID from list)
 ./tasker done 1
 
+# Export all tasks to CSV
+./tasker export -o my_tasks.csv
+
 # View help for any command
 ./tasker add --help
 ```
@@ -107,6 +112,7 @@ Tasker is a simple, efficient command-line task management tool built with Go. I
   tasker add "[title]" --description "[description]"
   tasker list
   tasker done [task_id]
+  tasker export --output "[filename.csv]"
   ```
 
 - **Test Commands**:
@@ -129,7 +135,8 @@ tasker/
 │   ├── root.go                # Root command and CLI setup
 │   ├── add.go                 # Add command
 │   ├── list.go                # List command
-│   └── done.go                # Done command
+│   ├── done.go                # Done command
+│   └── export.go              # Export command
 │
 ├── models/                     # Data structures
 │   └── task.go                # Task model definition
@@ -143,6 +150,7 @@ tasker/
 │   ├── add_test.go            # Add command tests
 │   ├── list_test.go           # List command tests
 │   ├── done_test.go           # Done command tests
+│   ├── export_test.go         # Export command tests
 │   └── integration_test.go    # End-to-end tests
 │
 └── docs/                       # Documentation
@@ -178,6 +186,7 @@ go test ./tests/... -v
 go test ./tests/... -v -run TestAdd     # Add command tests
 go test ./tests/... -v -run TestList    # List command tests
 go test ./tests/... -v -run TestDone    # Done command tests
+go test ./tests/... -v -run TestExport  # Export command tests
 
 # Run with coverage
 go test ./tests/... -cover
@@ -189,10 +198,11 @@ go test ./tests/... -v -run TestWorkflow
 
 ### Test Coverage
 
-- **40+ Test Cases** covering all functionality
+- **50+ Test Cases** covering all functionality
 - **95%+ Code Coverage** across all commands
 - **Isolated Testing** with temporary databases
 - **Concurrent Testing** for thread safety validation
+- **CSV Export Testing** with format validation and error scenarios
 
 ## 🛠️ Development
 
