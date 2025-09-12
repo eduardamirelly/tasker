@@ -11,7 +11,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// addCmd represents the add command
 var addCmd = &cobra.Command{
 	Use:   "add [title]",
 	Short: "Add a new task",
@@ -37,11 +36,9 @@ Examples:
 func init() {
 	rootCmd.AddCommand(addCmd)
 
-	// Add description flag
 	addCmd.Flags().StringP("description", "d", "", "Task description")
 }
 
-// addTask adds a new task to the database
 func addTask(title, description string) error {
 	query := `INSERT INTO tasks (title, description, created_at) VALUES (?, ?, ?)`
 	_, err := database.DB.Exec(query, title, description, time.Now())
