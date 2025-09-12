@@ -67,12 +67,18 @@ func markTaskAsDone(task *models.Task) {
 		return
 	}
 
+	completedTime := time.Now()
 	query := `UPDATE tasks SET done = TRUE, completed_at = ? WHERE id = ?`
-	_, err := database.DB.Exec(query, time.Now(), task.ID)
+	_, err := database.DB.Exec(query, completedTime, task.ID)
 	if err != nil {
 		fmt.Printf("Error marking task as done: %v\n", err)
 		return
 	}
+
+	// Update the in-memory task object
+	task.Done = true
+	task.CompletedAt = &completedTime
+
 	fmt.Printf("✓ Task marked as done: %s\n", task.Title)
 	printTask(task)
 }
@@ -81,10 +87,14 @@ func printTask(task *models.Task) {
 	if task.Description == "" {
 		task.Description = "N/A"
 	}
+	completedAt := "N/A"
+	if task.CompletedAt != nil {
+		completedAt = task.CompletedAt.Format("2006-01-02 15:04:05")
+	}
 	fmt.Println("--------------------------------")
 	fmt.Printf("Title: %s\n", task.Title)
 	fmt.Printf("Description: %s\n", task.Description)
 	fmt.Printf("Created At: %s\n", task.CreatedAt.Format("2006-01-02 15:04:05"))
-	fmt.Printf("Completed At: %s\n", task.CompletedAt.Format("2006-01-02 15:04:05"))
+	fmt.Printf("Completed At: %s\n", completedAt)
 	fmt.Println("--------------------------------")
 }
