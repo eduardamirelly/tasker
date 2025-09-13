@@ -2,6 +2,19 @@
 
 A comprehensive guide to the Tasker command-line task management application.
 
+<p>
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=428EE1&labelColor=2F3136">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/eduardamirelly/tasker?color=428EE1&labelColor=2F3136">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/eduardamirelly/tasker?color=428EE1&labelColor=2F3136">
+</p>
+
+<p>
+  <a href="https://github.com/eduardamirelly/tasker/issues/new/choose">Report Bug</a>
+  ·
+  <a href="https://github.com/eduardamirelly/tasker/issues/new/choose">Suggestions</a>
+</p>
+
+
 ## 📋 Table of Contents
 
 - [Project Overview](#-project-overview)
