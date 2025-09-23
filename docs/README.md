@@ -280,14 +280,3 @@ CREATE TABLE tasks (
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙋‍♂️ Support
-
-For questions, issues, or contributions:
-
-1. **Check Documentation**: Review the comprehensive docs
-2. **Run Tests**: Ensure your environment is working correctly
-3. **Create Issues**: For bugs or feature requests
-4. **Contribute**: Follow the contribution guidelines above
-
-Happy task management! 🎉
